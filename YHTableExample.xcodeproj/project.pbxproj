@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8181A380273B667A006686FD /* ExampleNibHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8181A37F273B667A006686FD /* ExampleNibHeader.swift */; };
+		8181A382273B6685006686FD /* ExampleNibHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8181A381273B6685006686FD /* ExampleNibHeader.xib */; };
+		8181A385273B6A2E006686FD /* ExampleNibCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8181A383273B6A2E006686FD /* ExampleNibCell.swift */; };
+		8181A386273B6A2E006686FD /* ExampleNibCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8181A384273B6A2E006686FD /* ExampleNibCell.xib */; };
+		8181A388273B725F006686FD /* YHTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8181A387273B725F006686FD /* YHTableView.swift */; };
 		81A61060273A1E6C007B1948 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6105F273A1E6C007B1948 /* AppDelegate.swift */; };
-		81A61062273A1E6C007B1948 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A61061273A1E6C007B1948 /* SceneDelegate.swift */; };
 		81A61064273A1E6C007B1948 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A61063273A1E6C007B1948 /* ViewController.swift */; };
 		81A61067273A1E6C007B1948 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A61065273A1E6C007B1948 /* Main.storyboard */; };
 		81A61069273A1E6E007B1948 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81A61068273A1E6E007B1948 /* Assets.xcassets */; };
@@ -16,6 +20,12 @@
 		81A61077273A1E6E007B1948 /* YHTableExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A61076273A1E6E007B1948 /* YHTableExampleTests.swift */; };
 		81A61081273A1E6E007B1948 /* YHTableExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A61080273A1E6E007B1948 /* YHTableExampleUITests.swift */; };
 		81A61083273A1E6E007B1948 /* YHTableExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A61082273A1E6E007B1948 /* YHTableExampleUITestsLaunchTests.swift */; };
+		81A61091273A1F9B007B1948 /* YHTableItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A61090273A1F9B007B1948 /* YHTableItemModel.swift */; };
+		81A61093273A4148007B1948 /* YHTableSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A61092273A4148007B1948 /* YHTableSectionModel.swift */; };
+		81A61095273A4DE8007B1948 /* YHTbBaseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A61094273A4DE8007B1948 /* YHTbBaseDelegate.swift */; };
+		81A61098273A4F5E007B1948 /* ExampleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A61097273A4F5E007B1948 /* ExampleHeader.swift */; };
+		81A6109A273A5104007B1948 /* ExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A61099273A5104007B1948 /* ExampleCell.swift */; };
+		81A6109C273A517A007B1948 /* ExampleFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6109B273A517A007B1948 /* ExampleFooter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +46,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8181A37F273B667A006686FD /* ExampleNibHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNibHeader.swift; sourceTree = "<group>"; };
+		8181A381273B6685006686FD /* ExampleNibHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleNibHeader.xib; sourceTree = "<group>"; };
+		8181A383273B6A2E006686FD /* ExampleNibCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNibCell.swift; sourceTree = "<group>"; };
+		8181A384273B6A2E006686FD /* ExampleNibCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleNibCell.xib; sourceTree = "<group>"; };
+		8181A387273B725F006686FD /* YHTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YHTableView.swift; sourceTree = "<group>"; };
 		81A6105C273A1E6C007B1948 /* YHTableExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YHTableExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A6105F273A1E6C007B1948 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		81A61061273A1E6C007B1948 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		81A61063273A1E6C007B1948 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		81A61066273A1E6C007B1948 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81A61068273A1E6E007B1948 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +63,12 @@
 		81A6107C273A1E6E007B1948 /* YHTableExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YHTableExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A61080273A1E6E007B1948 /* YHTableExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YHTableExampleUITests.swift; sourceTree = "<group>"; };
 		81A61082273A1E6E007B1948 /* YHTableExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YHTableExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		81A61090273A1F9B007B1948 /* YHTableItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YHTableItemModel.swift; sourceTree = "<group>"; };
+		81A61092273A4148007B1948 /* YHTableSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YHTableSectionModel.swift; sourceTree = "<group>"; };
+		81A61094273A4DE8007B1948 /* YHTbBaseDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YHTbBaseDelegate.swift; sourceTree = "<group>"; };
+		81A61097273A4F5E007B1948 /* ExampleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleHeader.swift; sourceTree = "<group>"; };
+		81A61099273A5104007B1948 /* ExampleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCell.swift; sourceTree = "<group>"; };
+		81A6109B273A517A007B1948 /* ExampleFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleFooter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +119,9 @@
 		81A6105E273A1E6C007B1948 /* YHTableExample */ = {
 			isa = PBXGroup;
 			children = (
+				81A61096273A4F39007B1948 /* Example */,
+				81A6108F273A1F6B007B1948 /* YHTableClass */,
 				81A6105F273A1E6C007B1948 /* AppDelegate.swift */,
-				81A61061273A1E6C007B1948 /* SceneDelegate.swift */,
 				81A61063273A1E6C007B1948 /* ViewController.swift */,
 				81A61065273A1E6C007B1948 /* Main.storyboard */,
 				81A61068273A1E6E007B1948 /* Assets.xcassets */,
@@ -125,6 +146,31 @@
 				81A61082273A1E6E007B1948 /* YHTableExampleUITestsLaunchTests.swift */,
 			);
 			path = YHTableExampleUITests;
+			sourceTree = "<group>";
+		};
+		81A6108F273A1F6B007B1948 /* YHTableClass */ = {
+			isa = PBXGroup;
+			children = (
+				81A61090273A1F9B007B1948 /* YHTableItemModel.swift */,
+				81A61092273A4148007B1948 /* YHTableSectionModel.swift */,
+				81A61094273A4DE8007B1948 /* YHTbBaseDelegate.swift */,
+				8181A387273B725F006686FD /* YHTableView.swift */,
+			);
+			path = YHTableClass;
+			sourceTree = "<group>";
+		};
+		81A61096273A4F39007B1948 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				81A61097273A4F5E007B1948 /* ExampleHeader.swift */,
+				81A61099273A5104007B1948 /* ExampleCell.swift */,
+				81A6109B273A517A007B1948 /* ExampleFooter.swift */,
+				8181A37F273B667A006686FD /* ExampleNibHeader.swift */,
+				8181A381273B6685006686FD /* ExampleNibHeader.xib */,
+				8181A383273B6A2E006686FD /* ExampleNibCell.swift */,
+				8181A384273B6A2E006686FD /* ExampleNibCell.xib */,
+			);
+			path = Example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +279,9 @@
 			files = (
 				81A6106C273A1E6E007B1948 /* LaunchScreen.storyboard in Resources */,
 				81A61069273A1E6E007B1948 /* Assets.xcassets in Resources */,
+				8181A386273B6A2E006686FD /* ExampleNibCell.xib in Resources */,
 				81A61067273A1E6C007B1948 /* Main.storyboard in Resources */,
+				8181A382273B6685006686FD /* ExampleNibHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +306,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8181A385273B6A2E006686FD /* ExampleNibCell.swift in Sources */,
+				81A61095273A4DE8007B1948 /* YHTbBaseDelegate.swift in Sources */,
+				81A6109C273A517A007B1948 /* ExampleFooter.swift in Sources */,
+				81A61098273A4F5E007B1948 /* ExampleHeader.swift in Sources */,
+				81A61091273A1F9B007B1948 /* YHTableItemModel.swift in Sources */,
 				81A61064273A1E6C007B1948 /* ViewController.swift in Sources */,
+				8181A388273B725F006686FD /* YHTableView.swift in Sources */,
+				81A6109A273A5104007B1948 /* ExampleCell.swift in Sources */,
 				81A61060273A1E6C007B1948 /* AppDelegate.swift in Sources */,
-				81A61062273A1E6C007B1948 /* SceneDelegate.swift in Sources */,
+				81A61093273A4148007B1948 /* YHTableSectionModel.swift in Sources */,
+				8181A380273B667A006686FD /* ExampleNibHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
