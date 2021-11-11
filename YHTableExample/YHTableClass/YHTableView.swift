@@ -11,16 +11,12 @@ extension UITableView {
     
     func register(headerFooter : AnyClass) {
         let key = String(describing: headerFooter)
-        if !registerSet.contains(key) {
-            self.register(headerFooter, forHeaderFooterViewReuseIdentifier: key)
-            registerSet.add(key)
-        }
-    }
-    
-    func register(nibHeaderFooter : AnyClass) {
-        let key = String(describing: nibHeaderFooter)
-        if !registerSet.contains(key) {
-            self.register(UINib.init(nibName: key, bundle: nil), forHeaderFooterViewReuseIdentifier: key)
+        if !registerSet.contains(key) {   
+            if Bundle.main.path(forResource: key, ofType: "nib") != nil {
+                self.register(UINib.init(nibName: key, bundle: nil), forHeaderFooterViewReuseIdentifier: key)
+            } else {
+                self.register(headerFooter, forHeaderFooterViewReuseIdentifier: key)
+            }
             registerSet.add(key)
         }
     }
@@ -28,15 +24,11 @@ extension UITableView {
     func register(cell : AnyClass) {
         let key = String(describing: cell)
         if !registerSet.contains(key) {
-            self.register(cell, forCellReuseIdentifier: key)
-            registerSet.add(key)
-        }
-    }
-    
-    func register(nibCell : AnyClass) {
-        let key = String(describing: nibCell)
-        if !registerSet.contains(key) {
-            self.register(UINib.init(nibName: key, bundle: nil), forCellReuseIdentifier: key)
+            if Bundle.main.path(forResource: key, ofType: "nib") != nil {
+                self.register(UINib.init(nibName: key, bundle: nil), forCellReuseIdentifier: key)
+            } else {
+                self.register(cell, forCellReuseIdentifier: key)
+            }
             registerSet.add(key)
         }
     }

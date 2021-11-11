@@ -11,58 +11,28 @@ class YHTableSectionModel: NSObject {
     
     weak var tableView : UITableView?
 
-    var headerModel : YHTableItemModel?
-    var rowModels : [YHTableItemModel] = []
-    var footerModel : YHTableItemModel?
+    var headerModel : YHTbModProtocal?
+    var rowModels : [YHTbModProtocal] = []
+    var footerModel : YHTbModProtocal?
     
     init(tableView : UITableView) {
         self.tableView = tableView
         super.init()
     }
     
-    func createHeader(anyClass : AnyClass) -> YHTableItemModel{
-        tableView?.register(headerFooter: anyClass)
-        return self.createHeader(reusableIdentifier: String(describing: anyClass))
+    func createHeader<T : UITableViewHeaderFooterView>(mod : YHTableItemModel<T>) {
+        tableView?.register(headerFooter: T.self)
+        headerModel = mod
     }
     
-    func createNibHeader(anyClass : AnyClass) -> YHTableItemModel{
-        tableView?.register(nibHeaderFooter: anyClass)
-        return self.createHeader(reusableIdentifier: String(describing: anyClass))
+    func createFooter<T : UITableViewHeaderFooterView>(mod : YHTableItemModel<T>){
+        tableView?.register(headerFooter: T.self)
+        footerModel = mod
     }
     
-    func createHeader(reusableIdentifier : String) -> YHTableItemModel{
-        self.headerModel = YHTableItemModel.init(reusableIdentifier: reusableIdentifier)
-        return self.headerModel!
+    func createRow<T : UITableViewCell>(mod : YHTableItemModel<T>) {
+        tableView?.register(cell: T.self)
+        self.rowModels.append(mod)
     }
     
-    func createFooter(anyClass : AnyClass) -> YHTableItemModel{
-        tableView?.register(headerFooter: anyClass)
-        return self.createFooter(reusableIdentifier: String(describing: anyClass))
-    }
-    
-    func createNibFooter(anyClass : AnyClass) -> YHTableItemModel{
-        tableView?.register(nibHeaderFooter: anyClass)
-        return self.createFooter(reusableIdentifier: String(describing: anyClass))
-    }
-
-    func createFooter(reusableIdentifier : String) -> YHTableItemModel{
-        self.footerModel = YHTableItemModel.init(reusableIdentifier: reusableIdentifier)
-        return self.footerModel!
-    }
-    
-    func createRow(anyClass : AnyClass) -> YHTableItemModel{
-        tableView?.register(cell: anyClass)
-        return self.createRow(reusableIdentifier: String(describing: anyClass))
-    }
-    
-    func createNibRow(anyClass : AnyClass) -> YHTableItemModel{
-        tableView?.register(nibCell: anyClass)
-        return self.createRow(reusableIdentifier: String(describing: anyClass))
-    }
-    
-    func createRow(reusableIdentifier : String) -> YHTableItemModel{
-        let model = YHTableItemModel.init(reusableIdentifier: reusableIdentifier)
-        self.rowModels.append(model)
-        return model
-    }
 }

@@ -7,6 +7,18 @@
 
 import UIKit
 
+typealias YHHeightBlock = () -> CGFloat
+typealias YHSetHeightBlock = (_ height : CGFloat) -> Void
+
+protocol YHTbModProtocal : NSObjectProtocol{
+    var reusableIdentifier : String { get }
+    var estimatedHeightBlock : YHHeightBlock { get }
+    var heightBlock : YHHeightBlock { get }
+    var setHeightBlock : YHSetHeightBlock?  { get }
+    
+    func setData(view : UIView)
+}
+
 class YHTbBaseDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
 
     weak var tableView : UITableView?
@@ -40,7 +52,7 @@ class YHTbBaseDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if let headerModel = self.sectionModels[section].headerModel {
             let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: headerModel.reusableIdentifier)!
-            headerModel.setDataBlock?(view)
+            headerModel.setData(view: view)
             return view
         }
         return nil
@@ -53,7 +65,7 @@ class YHTbBaseDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         if let footerModel = self.sectionModels[section].footerModel {
             let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: footerModel.reusableIdentifier)!
-            footerModel.setDataBlock?(view)
+            footerModel.setData(view: view)
             return view
         }
         return nil
@@ -66,7 +78,7 @@ class YHTbBaseDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let rowModel = self.sectionModels[indexPath.section].rowModels[indexPath.row]
         let cell = tableView .dequeueReusableCell(withIdentifier: rowModel.reusableIdentifier, for: indexPath)
-        rowModel.setDataBlock?(cell)
+        rowModel.setData(view: cell)
         return cell
     }
 }

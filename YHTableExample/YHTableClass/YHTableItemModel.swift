@@ -7,11 +7,9 @@
 
 import UIKit
 
-typealias YHHeightBlock = () -> CGFloat
-typealias YHSetHeightBlock = (_ height : CGFloat) -> Void
-typealias SetDataBlock = (_ view : UIView) -> Void
+class YHTableItemModel <T : UIView> : NSObject, YHTbModProtocal {
 
-class YHTableItemModel : NSObject {
+    typealias SetDataBlock = (_ view : T) -> Void
     
     let reusableIdentifier : String
     var setDataBlock : SetDataBlock?
@@ -19,8 +17,14 @@ class YHTableItemModel : NSObject {
     var heightBlock : YHHeightBlock
     var setHeightBlock : YHSetHeightBlock?
     
-    init(reusableIdentifier : String) {
-        self.reusableIdentifier = reusableIdentifier//String(describing: T.self)
+    func setData(view: UIView) {
+        if let v = view as? T {
+            self.setDataBlock?(v)
+        }
+    }
+    
+    override init() {
+        self.reusableIdentifier = String(describing: T.self)
         self.heightBlock = {
             return UITableView.automaticDimension
         }
@@ -30,18 +34,20 @@ class YHTableItemModel : NSObject {
         super.init()
     }
     
-    func dequeueReusable(setDataBlock : @escaping SetDataBlock,
-                         estimatedHeightBlock : @escaping YHHeightBlock,
-                         heightBlock : @escaping YHHeightBlock,
-                         setHeightBlock : @escaping YHSetHeightBlock) {
+    convenience init(setDataBlock : @escaping SetDataBlock,
+                     estimatedHeightBlock : @escaping YHHeightBlock,
+                     heightBlock : @escaping YHHeightBlock,
+                     setHeightBlock : @escaping YHSetHeightBlock) {
+        self.init()
         self.setDataBlock = setDataBlock
         self.estimatedHeightBlock = estimatedHeightBlock
         self.heightBlock = heightBlock
         self.setHeightBlock = setHeightBlock
     }
     
-    func dequeueReusable(setDataBlock : @escaping SetDataBlock,
-                         height : CGFloat) {
+    convenience init(setDataBlock : @escaping SetDataBlock,
+                     height : CGFloat) {
+        self.init()
         self.setDataBlock = setDataBlock;
         self.estimatedHeightBlock = {
             return height
