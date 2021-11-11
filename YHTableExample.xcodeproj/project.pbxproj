@@ -26,6 +26,7 @@
 		81A61098273A4F5E007B1948 /* ExampleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A61097273A4F5E007B1948 /* ExampleHeader.swift */; };
 		81A6109A273A5104007B1948 /* ExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A61099273A5104007B1948 /* ExampleCell.swift */; };
 		81A6109C273A517A007B1948 /* ExampleFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6109B273A517A007B1948 /* ExampleFooter.swift */; };
+		81D815FA273CB6EF00A4FACE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 81D815F9273CB6EF00A4FACE /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		81A61097273A4F5E007B1948 /* ExampleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleHeader.swift; sourceTree = "<group>"; };
 		81A61099273A5104007B1948 /* ExampleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCell.swift; sourceTree = "<group>"; };
 		81A6109B273A517A007B1948 /* ExampleFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleFooter.swift; sourceTree = "<group>"; };
+		81D815F9273CB6EF00A4FACE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		81A61053273A1E6C007B1948 = {
 			isa = PBXGroup;
 			children = (
+				81D815F9273CB6EF00A4FACE /* README.md */,
 				81A6105E273A1E6C007B1948 /* YHTableExample */,
 				81A61075273A1E6E007B1948 /* YHTableExampleTests */,
 				81A6107F273A1E6E007B1948 /* YHTableExampleUITests */,
@@ -277,6 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81D815FA273CB6EF00A4FACE /* README.md in Resources */,
 				81A6106C273A1E6E007B1948 /* LaunchScreen.storyboard in Resources */,
 				81A61069273A1E6E007B1948 /* Assets.xcassets in Resources */,
 				8181A386273B6A2E006686FD /* ExampleNibCell.xib in Resources */,
