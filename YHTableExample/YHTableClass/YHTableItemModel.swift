@@ -39,15 +39,27 @@ class YHTableItemModel <T : UIView> : NSObject, YHTbModProtocal {
                      heightBlock : @escaping YHHeightBlock,
                      setHeightBlock : @escaping YHSetHeightBlock) {
         self.init()
+        self.dequeueReusable(setDataBlock: setDataBlock, estimatedHeightBlock: estimatedHeightBlock, heightBlock: heightBlock, setHeightBlock: setHeightBlock);
+    }
+    
+    convenience init(setDataBlock : @escaping SetDataBlock,
+                     height : CGFloat) {
+        self.init()
+        self.dequeueReusable(setDataBlock: setDataBlock, height: height)
+    }
+    
+    func dequeueReusable(setDataBlock : @escaping SetDataBlock,
+                         estimatedHeightBlock : @escaping YHHeightBlock,
+                         heightBlock : @escaping YHHeightBlock,
+                         setHeightBlock : @escaping YHSetHeightBlock) {
         self.setDataBlock = setDataBlock
         self.estimatedHeightBlock = estimatedHeightBlock
         self.heightBlock = heightBlock
         self.setHeightBlock = setHeightBlock
     }
     
-    convenience init(setDataBlock : @escaping SetDataBlock,
-                     height : CGFloat) {
-        self.init()
+    func dequeueReusable(setDataBlock : @escaping SetDataBlock,
+                         height : CGFloat) {
         self.setDataBlock = setDataBlock;
         self.estimatedHeightBlock = {
             return height
